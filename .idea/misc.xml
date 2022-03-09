@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/drawable-v24/background_set2.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/drawable-v24/background_set3.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/drawable-v24/background_set4.xml" value="0.2703125" />
         <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/drawable-v24/main_background2.xml" value="0.190625" />
+        <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/drawable/background_set1.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/drawable/main_background.xml" value="0.1953125" />
         <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/layout/activity_fragments_page.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/ramil/AndroidStudioProjects/FigmaProjectExampleCaptainKazahstainImprovedEdition/app/src/main/res/layout/fragment_blank.xml" value="0.13645833333333332" />

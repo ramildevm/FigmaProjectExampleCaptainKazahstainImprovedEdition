@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/parentBackLayout"
-    android:background="@drawable/backpage2"
+    android:background="@drawable/background_set1"
     tools:context=".FragmentsPage">
 
     <LinearLayout
