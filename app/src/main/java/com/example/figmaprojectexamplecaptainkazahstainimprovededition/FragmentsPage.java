@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ public class FragmentsPage extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         TransitionDrawable transition;
+        int animTime = 400;
         switch(event.getAction()){
             case MotionEvent.ACTION_DOWN:
                 x1 = event.getX();
@@ -49,19 +51,20 @@ public class FragmentsPage extends AppCompatActivity {
                     }
                     else if (curF == fragment1.gettag()){
                         curF = fragment2.gettag();
+                        fragment2.IsLeft = true;
                         findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set1));
                         transition = (TransitionDrawable) findViewById(R.id.parentBackLayout).getBackground();
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left).replace(R.id.frame_place, fragment2, curF).commit();
+                        getSupportFragmentManager().beginTransaction().addSharedElement(findViewById(R.id.button1),"button_transition").replace(R.id.frame_place, fragment2, curF).addToBackStack(null).commit();
                         ft.remove(getSupportFragmentManager().findFragmentById(R.id.frame_place)).commit();
-                        transition.startTransition(200);
+                        transition.startTransition(animTime);
                     }
                     else if(curF == fragment2.gettag()){
                         findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set2));
                         transition = (TransitionDrawable) findViewById(R.id.parentBackLayout).getBackground();
                         curF = fragment3.gettag();
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left).replace(R.id.frame_place, fragment3, curF).commit();
+                        getSupportFragmentManager().beginTransaction().addSharedElement(findViewById(R.id.button1),"button_transition").addToBackStack(null).replace(R.id.frame_place, fragment3, curF).commit();
                         ft.remove(getSupportFragmentManager().findFragmentById(R.id.frame_place)).commit();
-                        transition.startTransition(200);
+                        transition.startTransition(animTime);
                     }
                 }
                 else if(x1 < x2 & Math.abs(y1-y2)<150) {
@@ -69,17 +72,20 @@ public class FragmentsPage extends AppCompatActivity {
                         break;
                     } else if (curF == fragment2.gettag()) {
                         curF = fragment1.gettag();
+                        fragment2.IsLeft = false;
+                        fragment1.IsLeft = false;
                         findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set4));
                         transition = (TransitionDrawable) findViewById(R.id.parentBackLayout).getBackground();
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right).replace(R.id.frame_place, fragment1, curF).commit();
+                        getSupportFragmentManager().beginTransaction().addSharedElement(findViewById(R.id.button1),"button_transition").addToBackStack(null).replace(R.id.frame_place, fragment1, curF).commit();
                         ft.remove(getSupportFragmentManager().findFragmentById(R.id.frame_place)).commit();
-                        transition.startTransition(200);
+                        transition.startTransition(animTime);
                     } else if (curF == fragment3.gettag()) {
                         curF = fragment2.gettag();
+                        fragment3.IsLeft = false;
                         findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set3));
                         transition = (TransitionDrawable) findViewById(R.id.parentBackLayout).getBackground();
-                        transition.startTransition(200);
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right).replace(R.id.frame_place, fragment2, curF).commit();
+                        transition.startTransition(animTime);
+                        getSupportFragmentManager().beginTransaction().addSharedElement(findViewById(R.id.button1),"button_transition").addToBackStack(null).replace(R.id.frame_place, fragment2, curF).commit();
                         ft.remove(getSupportFragmentManager().findFragmentById(R.id.frame_place)).commit();
                     }
                 }
