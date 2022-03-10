@@ -51,7 +51,7 @@ public class FragmentsPage extends AppCompatActivity {
                         curF = fragment2.gettag();
                         findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set1));
                         transition = (TransitionDrawable) findViewById(R.id.parentBackLayout).getBackground();
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left).replace(R.id.frame_place, fragment2, curF).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_place, fragment2, curF).commit();
                         ft.remove(getSupportFragmentManager().findFragmentById(R.id.frame_place)).commit();
                         transition.startTransition(200);
                     }
@@ -59,7 +59,7 @@ public class FragmentsPage extends AppCompatActivity {
                         findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set2));
                         transition = (TransitionDrawable) findViewById(R.id.parentBackLayout).getBackground();
                         curF = fragment3.gettag();
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left).replace(R.id.frame_place, fragment3, curF).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_place, fragment3, curF).commit();
                         ft.remove(getSupportFragmentManager().findFragmentById(R.id.frame_place)).commit();
                         transition.startTransition(200);
                     }
@@ -71,7 +71,7 @@ public class FragmentsPage extends AppCompatActivity {
                         curF = fragment1.gettag();
                         findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set4));
                         transition = (TransitionDrawable) findViewById(R.id.parentBackLayout).getBackground();
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right).replace(R.id.frame_place, fragment1, curF).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_place, fragment1, curF).commit();
                         ft.remove(getSupportFragmentManager().findFragmentById(R.id.frame_place)).commit();
                         transition.startTransition(200);
                     } else if (curF == fragment3.gettag()) {
@@ -79,7 +79,7 @@ public class FragmentsPage extends AppCompatActivity {
                         findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set3));
                         transition = (TransitionDrawable) findViewById(R.id.parentBackLayout).getBackground();
                         transition.startTransition(200);
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right).replace(R.id.frame_place, fragment2, curF).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_place, fragment2, curF).commit();
                         ft.remove(getSupportFragmentManager().findFragmentById(R.id.frame_place)).commit();
                     }
                 }
