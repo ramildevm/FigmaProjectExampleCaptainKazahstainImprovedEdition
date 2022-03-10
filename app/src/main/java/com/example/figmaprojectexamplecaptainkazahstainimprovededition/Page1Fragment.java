@@ -13,11 +13,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class Page1Fragment extends Fragment {
-    public boolean IsLeft = true;
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            left = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_out_left);
+            right = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_in_left);
+            setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
+            setEnterTransition(right);
+            setExitTransition(left);
+        }
     }
+    Transition left;
+    Transition right;
     private String tag = "FIRST_FRAGMENT";
     public String gettag(){
         return tag;
@@ -25,19 +32,15 @@ public class Page1Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Transition left = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_out_left);
-            Transition right = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_in_left);
-            setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
-            if(IsLeft) {
-                setEnterTransition(right);
-                setExitTransition(left);
-            }
-            else{
-                setEnterTransition(left);
-                setExitTransition(right);
-            }
-        }
+
         return inflater.inflate(R.layout.fragment_page1, container, false);
+    }
+    public void setLeft(){
+        setEnterTransition(right);
+        setExitTransition(left);
+    }
+    public void setRight(){
+        setEnterTransition(left);
+        setExitTransition(right);
     }
 }

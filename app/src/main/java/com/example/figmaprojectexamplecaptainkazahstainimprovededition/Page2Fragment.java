@@ -17,30 +17,32 @@ public class Page2Fragment extends Fragment {
     public String gettag(){
         return tag;
     }
-    public boolean IsLeft;
+    Transition left;
+    Transition right;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            left = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_out_left);
+            right = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_in_left);
+            setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
+            setEnterTransition(right);
+            setExitTransition(left);
+        }
 
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        Transition left = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_out_left);
-        Transition right = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_in_left);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
-            if(IsLeft) {
-                setEnterTransition(right);
-                setExitTransition(left);
-            }
-            else{
-                setEnterTransition(left);
-                setExitTransition(right);
-            }
-        }
         return inflater.inflate(R.layout.fragment_page2, container, false);
 
+    }
+    public void setLeft(){
+        setEnterTransition(right);
+        setExitTransition(left);
+    }
+    public void setRight(){
+        setEnterTransition(left);
+        setExitTransition(right);
     }
 }

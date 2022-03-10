@@ -19,20 +19,16 @@ public class Page3Fragment extends Fragment {
         return tag;
     }
     public boolean IsLeft = true;
+    Transition left;
+    Transition right;
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Transition left = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_out_left);
-        Transition right = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_in_left);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            left = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_out_left);
+            right = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_in_left);
             setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
-            if(IsLeft) {
-                setEnterTransition(right);
-                setExitTransition(left);
-            }
-            else{
-                setEnterTransition(left);
-                setExitTransition(right);
-            }
+            setEnterTransition(right);
+            setExitTransition(left);
         }
     }
     @Override
@@ -40,5 +36,13 @@ public class Page3Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_page3, container, false);
+    }
+    public void setLeft(){
+        setEnterTransition(right);
+        setExitTransition(left);
+    }
+    public void setRight(){
+        setEnterTransition(left);
+        setExitTransition(right);
     }
 }
