@@ -57,9 +57,9 @@ public class DownThirdPageOfCKP extends AppCompatActivity {
                         x2 = touchEvent.getX();
                         float yPanel = findViewById(R.id.mainscroll).getScrollY();
                         if (x1 < x2 & Math.abs(y1-y2)<150) {
-                        Intent i = new Intent(DownThirdPageOfCKP.this, DownFirstPageOfCKP.class);
+                        Intent i = new Intent(DownThirdPageOfCKP.this, DownSecondPageOfCKP.class);
                         startActivity(i);
-                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                         }
                         else if (y1 < y2 & yPanel == 0 & Math.abs(x1 - x2) < 150) {
                             FragmentsPage.curF = new Page3Fragment().gettag();

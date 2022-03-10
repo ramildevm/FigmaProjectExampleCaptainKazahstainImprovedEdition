@@ -65,7 +65,7 @@ public class DownSecondPageOfCKP extends AppCompatActivity {
                         else if (x1 < x2 & Math.abs(y1-y2)<150) {
                             Intent i = new Intent(DownSecondPageOfCKP.this, DownFirstPageOfCKP.class);
                             startActivity(i);
-                            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                         }
                         else if (y1<y2 & yPanel==0 & Math.abs(x1-x2)<150){
                             FragmentsPage.curF = new Page2Fragment().gettag();
