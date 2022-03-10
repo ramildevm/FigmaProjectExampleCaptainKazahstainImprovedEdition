@@ -2,6 +2,7 @@ package com.example.figmaprojectexamplecaptainkazahstainimprovededition;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -21,15 +22,25 @@ public class FragmentsPage extends AppCompatActivity {
     Page1Fragment fragment1 = new Page1Fragment();
     Page2Fragment fragment2 = new Page2Fragment();
     Page3Fragment fragment3 = new Page3Fragment();
-    String curF;
+    static String curF;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragments_page);
-        curF = fragment1.gettag();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_place, fragment1, curF).commit();
-        findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set1));
+        if(curF==fragment1.gettag()){
+            setScene(fragment1,ContextCompat.getDrawable(this,R.drawable.background_set1));
+        }
+        else if(curF==fragment2.gettag()){
+            setScene(fragment2,ContextCompat.getDrawable(this,R.drawable.background_set2));
+        }
+        else if(curF==fragment3.gettag()){
+            setScene(fragment3,ContextCompat.getDrawable(this,R.drawable.background_set3));
+        }
 
+    }
+    private void setScene(Fragment f, Drawable d){
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_place, f, curF).commit();
+        findViewById(R.id.parentBackLayout).setBackground(d);
     }
     public boolean onTouchEvent(MotionEvent event){
         FragmentManager fm = getSupportFragmentManager();

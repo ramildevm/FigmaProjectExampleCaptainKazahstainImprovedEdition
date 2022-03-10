@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         ActivityOptions options;
         options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pair1);
         bundle = options.toBundle();
-
+        FragmentsPage.curF = new Page1Fragment().gettag();
         Intent intent = new Intent(this,FragmentsPage.class);
         startActivity(intent, bundle);
     }

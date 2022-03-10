@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DownFirstPageOfCKP"
+    android:background="@color/white"
+    android:id="@+id/mainscroll">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/toppanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#bfFFFFFF"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgGoHome"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/userimg"
+
+                />
+
+            <TextView
+                android:id="@+id/imgGoHomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Главная"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/galleryPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:text="Галерея"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Карта Курортов"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/mainRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/down1_1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="69dp"
+                android:background="#B8FFFFFF"
+                android:gravity="center"
+                android:text="Ишгль Австрия "
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:layout_marginLeft="10dp"
+            android:text="Большой горнолыжный курорт с космополитичной атмосферой: высоко над Ишглем в Пацнауне вплоть до швейцарской границы раскинулась просторная «Сильвретта Арена». Многочисленные современные подъемники, инфраструктура для новичков, сноупарки и интересные склоны ждут любителей зимних видов спорта в горах Замнаун."
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="10dp"
+            android:background="@drawable/down1_2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="В Ишгле всего 1600 жителей - и все же это ворота в один из крупнейших и наиболее известных во всем мире горнолыжных курортов Тироля: из небольшой деревни в Пацнауне гондола доставит вас к «Сильвретта Арена». На высоте от 2000 до 2872 метров склоны различной степени сложности ведут к швейцарскому городку Замнаун. Выбор маршрутов велик. Крутые спусков с уклоном до 70 процентов ждут продвинутых. Те, кто предпочитает комфортное катание, предпочтет горы Замнаун со склонами средней сложности. До всех отправных точек можно добраться на современных подъемниках, в том числе на Идальпе. Там любители фристайла тренируют прыжки в сноупарке, а новички исследуют более пологие склоны в горнолыжной зоне для начинающих. Также свои услуги предлагают лыжная школа и лыжный детский сад."
+            android:textColor="@color/black"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/button5_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Смотреть источник"
+            android:background="#b30c0c7c"/>
+    </LinearLayout>
+</ScrollView>

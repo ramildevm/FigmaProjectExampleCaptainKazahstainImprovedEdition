@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DownSecondPageOfCKP"
+    android:background="@color/white"
+    android:id="@+id/mainscroll">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/toppanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#bfFFFFFF"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgGoHome"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/userimg"
+                />
+
+            <TextView
+                android:id="@+id/imgGoHomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Главная"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/galleryPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:text="Галерея"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Карта Курортов"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/mainRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back5_1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="69dp"
+                android:background="#B8FFFFFF"
+                android:gravity="center"
+                android:text="Церматт Швейцария"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="Церматт неизменно бьет все рекорды: самые высокогорные трассы и канатная дорога, две страны, гарантированный снег и возможность кататься на горных лыжах в течение всего года. Кроме того, Церматт – один из лучших курортов в Альпах для гурманов."
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/down2_2"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Этот курорт в Швейцарии, в кантоне Вале предлагает множество вариантов отдыха и зимой, и летом: горные лыжи и сноуборд, отдых с детьми, фото-туры и гастрономические путешествия. А огромный выбор отелей, шале и апартаментов позволяет легко организовать  идеальный отпуск. Церматт славится не только своими ресторанами и отелями, но и оживленной ночной жизнью. Не забыты и семьи с детьми: ски-пассы для тех, кому еще не исполнилось 9 лет – абсолютно бесплатны, а для подростков до 16 лет предлагаются различные скидки. Церматт не случайно входит в число самых роскошных курортов мира – Best of the Alps: он неоднократно признавался лучшим по различным рейтингам. И, конечно, Церматт стоит хотя бы раз увидеть для того, чтобы поразиться красоте Маттерхорна – самой фотографируемой вершине Европы."
+            android:textColor="@color/black"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/button5_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Смотреть источник"
+            android:background="#b30c0c7c"/>
+    </LinearLayout>
+</ScrollView>

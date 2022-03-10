@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DownThirdPageOfCKP"
+    android:background="@color/white"
+    android:id="@+id/mainscroll">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/toppanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#bfFFFFFF"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgGoHome"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/userimg"
+
+                />
+
+            <TextView
+                android:id="@+id/imgGoHomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Главная"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/galleryPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:text="Галерея"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Карта Курортов"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/mainRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/down3_1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="69dp"
+                android:background="#B8FFFFFF"
+                android:gravity="center"
+                android:text="Альта-Бадия Италия"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:layout_marginLeft="10dp"
+            android:text="Почти все трассы сконцентрированы на широком, покрытом хвойным лесом, плато, немного в стороне расположена небольшая, но живописная зона катания Санта-Кроче (над курортом Педрачес)."
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="10dp"
+            android:background="@drawable/down3_2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Черных трасс здесь немного, большинство склонов отлично подходят для начинающих и катающихся на среднем уровне. Из более чем шестидесяти трасс с синей маркировкой только 14 находятся не между Сан-Кассиано и Корварой.
+Классическая черная трасса Gran Risa, на которой проходит этап Кубка мира, начинается от верхней станции подъемника Piz la Lla из Ла-Виллы. Короткая, но достаточно сложная трасса от Col Pradat до станции Edelweiss (чтобы попасть на нее, немного спуститесь из Кольфоско по синей трассе до нижней остановки подъемника) – еще один вариант для сильных лыжников.
+Для тех, кто катается на среднем уровне, в Альта Бадии есть множество красных трасс. Самая высокая и весьма живописная красная трасса спускается от станции Lagazuoi. Длинная красная трасса начинается от станции Piz Sorega (2003 м, подняться проще всего на кабинном подъемнике из Сан Кассьяно) и приходит прямо в Ла Виллу. "
+            android:textColor="@color/black"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/button5_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Смотреть источник"
+            android:background="#b30c0c7c"/>
+    </LinearLayout>
+</ScrollView>

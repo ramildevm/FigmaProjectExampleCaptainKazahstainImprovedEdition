@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
+            android:name=".DownThirdPageOfCKP"
+            android:exported="false" />
+        <activity
+            android:name=".DownSecondPageOfCKP"
+            android:exported="false" />
+        <activity
+            android:name=".DownFirstPageOfCKP"
+            android:exported="false" />
+        <activity
             android:name=".GalleryPageOfCKP"
             android:exported="false" />
         <activity
