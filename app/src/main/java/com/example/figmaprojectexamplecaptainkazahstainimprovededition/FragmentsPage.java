@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
@@ -20,14 +21,17 @@ import android.view.animation.AnimationUtils;
 
 public class FragmentsPage extends AppCompatActivity {
     float x1,x2,y1,y2;
-    Page1Fragment fragment1 = new Page1Fragment();
-    Page2Fragment fragment2 = new Page2Fragment();
-    Page3Fragment fragment3 = new Page3Fragment();
+    static Page1Fragment fragment1;
+    static Page2Fragment fragment2;
+    static Page3Fragment fragment3;
     static String curF;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragments_page);
+        fragment1 = new Page1Fragment();
+        fragment2 = new Page2Fragment();
+        fragment3 = new Page3Fragment();
         if(curF==fragment1.gettag()){
             setScene(fragment1,ContextCompat.getDrawable(this,R.drawable.background_set1));
         }
@@ -37,6 +41,33 @@ public class FragmentsPage extends AppCompatActivity {
         else if(curF==fragment3.gettag()){
             setScene(fragment3,ContextCompat.getDrawable(this,R.drawable.background_set3));
         }
+        findViewById(R.id.galleryPage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FragmentsPage.this,GalleryPageOfCKP.class));
+                overridePendingTransition(R.anim.slide_in_up,R.anim.slide_out_down);
+            }
+        });
+        findViewById(R.id.imgGoHomeText).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityOptions options;
+                options = ActivityOptions.makeSceneTransitionAnimation(FragmentsPage.this, findViewById(R.id.imgGoHome),findViewById(R.id.imgGoHome).getTransitionName());
+                Bundle bundle = options.toBundle();
+                startActivity(new Intent(FragmentsPage.this,MainActivity.class),bundle);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            }
+        });
+        findViewById(R.id.imgGoHome).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityOptions options;
+                options = ActivityOptions.makeSceneTransitionAnimation(FragmentsPage.this, findViewById(R.id.imgGoHome),findViewById(R.id.imgGoHome).getTransitionName());
+                Bundle bundle = options.toBundle();
+                startActivity(new Intent(FragmentsPage.this,MainActivity.class),bundle);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            }
+        });
 
     }
     private void setScene(Fragment f, Drawable d){
@@ -97,7 +128,6 @@ public class FragmentsPage extends AppCompatActivity {
                         fragment3.setRight();
                         fragment2.setRight();
                         curF = fragment2.gettag();
-                        fragment3.IsLeft = false;
                         findViewById(R.id.parentBackLayout).setBackground(ContextCompat.getDrawable(this,R.drawable.background_set3));
                         transition = (TransitionDrawable) findViewById(R.id.parentBackLayout).getBackground();
                         transition.startTransition(animTime);
@@ -125,6 +155,18 @@ public class FragmentsPage extends AppCompatActivity {
                 break;
         }
         return false;
+    }
+    public void goToPage4(View v){
+        startActivity(new Intent(FragmentsPage.this,DownFirstPageOfCKP.class));
+        overridePendingTransition(R.anim.slide_in_down,R.anim.slide_out_up);
+    }
+    public void goToPage5(View v){
+        startActivity(new Intent(FragmentsPage.this,DownSecondPageOfCKP.class));
+        overridePendingTransition(R.anim.slide_in_down,R.anim.slide_out_up);
+    }
+    public void goToPage6(View v){
+        startActivity(new Intent(FragmentsPage.this,DownThirdPageOfCKP.class));
+        overridePendingTransition(R.anim.slide_in_down,R.anim.slide_out_up);
     }
 
 }

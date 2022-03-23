@@ -41,7 +41,14 @@
             android:layout_margin="10dp"
             android:background="@drawable/rounded_border"
             android:text="Узнать новое!"
+            android:onClick="goToPage4"
             android:textSize="13sp"
             android:transitionName="button_transition" />
+        <ImageView
+            android:id="@+id/imageViewSwipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:background="@drawable/ic_swipe_page1" />
     </LinearLayout>
 </FrameLayout>

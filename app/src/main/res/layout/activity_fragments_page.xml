@@ -15,12 +15,12 @@
 
         <LinearLayout
             android:id="@+id/toppanel"
-            android:transitionName="top_panel_transition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:background="#bfFFFFFF"
-            android:gravity="center">
+            android:gravity="center"
+            android:transitionName="top_panel_transition">
 
             <ImageView
                 android:id="@+id/imgGoHome"
@@ -28,8 +28,7 @@
                 android:layout_height="70dp"
                 android:layout_margin="12dp"
                 android:background="@drawable/userimg"
-                android:transitionName="image_transition"
-                />
+                android:transitionName="image_transition" />
 
             <TextView
                 android:id="@+id/imgGoHomeText"
@@ -37,8 +36,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Главная"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/galleryPage"
@@ -47,8 +46,8 @@
                 android:layout_marginLeft="30dp"
                 android:layout_weight="1"
                 android:text="Галерея"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -56,16 +55,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Карта Курортов"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <fragment
+            android:id="@+id/frame_place"
+            android:name="com.example.figmaprojectexamplecaptainkazahstainimprovededition.BlankFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/frame_place"
-            android:layout_marginTop="60dp"
-            android:name="com.example.figmaprojectexamplecaptainkazahstainimprovededition.BlankFragment"
-            />
+            android:layout_marginTop="60dp" />
 
     </LinearLayout>
 </RelativeLayout>

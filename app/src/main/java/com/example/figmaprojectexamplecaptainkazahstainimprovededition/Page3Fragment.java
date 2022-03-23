@@ -18,7 +18,6 @@ public class Page3Fragment extends Fragment {
     public String gettag(){
         return tag;
     }
-    public boolean IsLeft = true;
     Transition left;
     Transition right;
     public void onCreate(@Nullable Bundle savedInstanceState) {

@@ -26,8 +26,7 @@ public class Page2Fragment extends Fragment {
             left = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_out_left);
             right = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_in_left);
             setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
-            setEnterTransition(right);
-            setExitTransition(left);
+            setLeft();
         }
 
     }

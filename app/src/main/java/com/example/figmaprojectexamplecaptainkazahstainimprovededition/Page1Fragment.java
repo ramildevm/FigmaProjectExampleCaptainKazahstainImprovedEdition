@@ -19,8 +19,7 @@ public class Page1Fragment extends Fragment {
             left = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_out_left);
             right = TransitionInflater.from(getContext()).inflateTransition(R.transition.slide_in_left);
             setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
-            setEnterTransition(right);
-            setExitTransition(left);
+            setLeft();
         }
     }
     Transition left;
@@ -32,7 +31,6 @@ public class Page1Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         return inflater.inflate(R.layout.fragment_page1, container, false);
     }
     public void setLeft(){
@@ -43,4 +41,5 @@ public class Page1Fragment extends Fragment {
         setEnterTransition(left);
         setExitTransition(right);
     }
+
 }
